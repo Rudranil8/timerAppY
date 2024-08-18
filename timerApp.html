@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: azure;
+            text-align:center;
+        }
+        h1{
+            color:black;
+            text-align:center;
+        }
+        .div{
+            background-color: white;
+            height:60px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            color:white;
+            background-color: darkgreen;
+        }
+    </style>
+    <h1>Multiple Timer App</h1>
+    <div class="div">
+        <div class="x">
+            <label>Hours:</label><input type="number" placeholder="0" id="h">
+            <label>Minitues:</label><input type="number" placeholder="0" id="m">
+            <label>Seconds:</label><input type="number" placeholder="0" id="s">
+            <button type="submit" style="color:white; background-color:darkgreen">Start New Timer</button>
+        </div>
+    </div>
+    <div class="text"></div>
+    <script>
+        let x=document.querySelector("button");
+        let a=document.querySelector("#h").value;
+        let b=document.querySelector("#m").value;
+        let c=document.querySelector("#s").value;
+        x.addEventListener("click", ()=>{
+            document.querySelector(".text").innerHTML=`<h2>Time left: ${a}0h ${b}0m ${c}0s</h2>
+            <button>Stop Timer</button>
+            `;
+        });
+    </script>
+</body>
+</html>
